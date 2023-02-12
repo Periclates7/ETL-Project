@@ -1,6 +1,6 @@
 ![Cabecera](https://static1-es.millenium.gg/articles/1/36/32/1/@/169471-league-of-legends-article_image_d-1.jpg)
 
-# ETL PROJECT -> League of Legends Database 🎮
+# 🎮 ETL PROJECT -> League of Legends Database 🎮
   
 El presente proyecto se basa en la necesidad que me surge como jugador del juego online League of Legends de tener una base de datos accesible y funcional para la configuración óptima de cada campeón antes de cada partida. Para ello se han utilizado las técnicas propias del proceso ETL (Extracción, Transformación y Carga) para la realización de dicha base de datos en un servidos SQL.
   
