@@ -1,4 +1,4 @@
-![Cabecera]([https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.millenium.gg%2Fnoticias%2F36321.html&psig=AOvVaw2Ef_EOPqSrJws7hRLaKoz6&ust=1676308418664000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNCHgdG9kP0CFQAAAAAdAAAAABAE](https://static1-es.millenium.gg/articles/1/36/32/1/@/169471-league-of-legends-article_image_d-1.jpg))
+![Cabecera](https://static1-es.millenium.gg/articles/1/36/32/1/@/169471-league-of-legends-article_image_d-1.jpg)
 
 # ETL PROJECT -> League of Legends Database 🎮
   
