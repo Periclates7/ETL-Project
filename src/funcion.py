@@ -4,6 +4,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 PATH=ChromeDriverManager().install()
 
+import requests
+from bs4 import BeautifulSoup
+
 
 
 def extraer_datos(url):
@@ -19,9 +22,29 @@ def extraer_datos(url):
     
     if data[2] == 'Top' or data[2] == 'Mid' or data[2] == 'Jungla' or data[2] == 'ADC' or data[2] == 'Support':
         fuerte = data[3:8]
+        fuerte_str = ''
+        for e in fuerte:
+            fuerte_str += e + ' '
+        fuerte_str = fuerte_str[:-1]
+            
         debil = data[8:13]
+        debil_str = ''
+        for e in debil:
+            debil_str += e + ' '
+        debil_str = debil_str[:-1]
+        
         hechizos = data[13:15]
+        hechizos_str = ''
+        for e in hechizos:
+            hechizos_str += e + ' '
+        hechizos_str = hechizos_str[:-1]
+        
         obj_ini = data[15:17]
+        obj_ini_str = ''
+        for e in obj_ini:
+            obj_ini_str += e + ' '
+        obj_ini_str = obj_ini_str[:-1]
+        
         item_1 = data[17]
         item_2 = data[18]
         item_3 = data[19]
@@ -32,9 +55,29 @@ def extraer_datos(url):
     
     else:
         fuerte = data[2:7]
+        fuerte_str = ''
+        for e in fuerte:
+            fuerte_str += e + ' '
+        fuerte_str = fuerte_str[:-1]
+        
         debil = data[7:12]
+        debil_str = ''
+        for e in debil:
+            debil_str += e + ' '
+        debil_str = debil_str[:-1]
+        
         hechizos = data[12:14]
+        hechizos_str = ''
+        for e in hechizos:
+            hechizos_str += e + ' '
+        hechizos_str = hechizos_str[:-1]
+        
         obj_ini = data[14:16]
+        obj_ini_str = ''
+        for e in obj_ini:
+            obj_ini_str += e + ' '
+        obj_ini_str = obj_ini_str[:-1]
+        
         item_1 = data[16]
         item_2 = data[17]
         item_3 = data[18]
@@ -46,10 +89,10 @@ def extraer_datos(url):
     
     data_clean = {'campeon':nombre,
                   #'posicion':posicion,
-                  'fuerte':fuerte,
-                  'debil': debil,
-                  'hechizos':hechizos,
-                  'obj_ini':obj_ini,
+                  'fuerte':fuerte_str,
+                  'debil': debil_str,
+                  'hechizos':hechizos_str,
+                  'obj_ini':obj_ini_str,
                   'item_1':item_1,
                   'item_2':item_2,
                   'item_3':item_3,
@@ -77,11 +120,16 @@ def extraer_runas(url):
     lista = [e.text for e in runas]
     
     lista = lista[:7]
+    word = ''
+    
+    for e in lista:
+        word += e + ',' + ' '
+    word = word[:-1]
     
     nombre = sopa.find('h1', {'class':'text-2xl truncate'}).text[6:]
     
     
-    data = {'nombre':nombre,
-            'runas':lista}
+    data = {'campeon':nombre,
+            'runas':word}
     
     return data
