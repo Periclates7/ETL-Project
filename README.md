@@ -36,3 +36,5 @@ Una vez preparados, es hora de cargar nuestros datos a SQL de manera que sean fu
   
 La organización en una actividad que se está desarrollando, independientemente de su índole, es imprescindible para llevarla a cabo con el mayor rigor y la mayor productividad. Es por esto que nace la necesidad de tener una base de datos ordenada, accesible y funcional. Mediante la extracción, transformación y carga de los datos, se ha cubierto tal necesidad.
   
+En la ruta 'data/querys/querys.sql' de este repositorio, encontrarán algunos ejemplos de querys que avalan el rendimiento y la funcionalidad de la recién creada base de datos.
+  
